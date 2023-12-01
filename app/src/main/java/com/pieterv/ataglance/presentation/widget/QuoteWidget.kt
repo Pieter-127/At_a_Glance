@@ -29,10 +29,8 @@ class QuoteWidget : GlanceAppWidget() {
     @Composable
     private fun QuoteWidgetContent(modifier: GlanceModifier = GlanceModifier, context: Context) {
         Column(
-            modifier = modifier.background(R.color.white).clickable {
-                //unfortunately this doesn't work, but I would really like it to :(
-                actionStartActivity<MainActivity>()
-            },
+            modifier = modifier.background(R.color.white)
+                .clickable(actionStartActivity<MainActivity>()),
             verticalAlignment = Alignment.CenterVertically,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
